@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor:none
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family:"Fira Code","Montserrat","Poppins",Arial, Helvetica, sans-serif;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}   
+h1{
+    text-transform: capitalize;
+    font-size: 23px;
+    position: relative;
+    width: fit-content;
+    z-index: 1000;
+    padding: 5px;
+}
+h1 > .popup {
+    position: absolute;
+    top:0px;
+    text-align: right;
+    background: #000;
+    color:white;
+    padding:5px 15px;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+}
+h1 > .popup.visible{
+    visibility: visible;
+    opacity: 1;
+}
+
+h2{
+    position: absolute;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    left : 50%;
+    top : 10%;
+    transform: translate(-50%,0);
+}
+footer{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom : 10%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+#circle{
+    position: absolute;
+    min-width: 30px;
+    min-height: 30px;
+    /* border-radius: 50%; */
+    background: #000;
+    /* z-index: -1; */
+    pointer-events: none;
+    
+}
