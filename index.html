@@ -10,11 +10,23 @@
     <div id="circle"></div>
     <h2>Tooltip and custom cursor</h2>
     <div class="">
-        <h1 data-tooltip="Tooltip 1"><span class="popup"></span>I see these things are getting intresting day by day 😜</h1>
-        <h1 data-tooltip="This is long tooltip"><span class="popup"></span>Indeed They Are! ❤</h1>
-        <h1>This text is without a tooltip</h1>
+        <h1 class="tooltip" data-tooltip="Tooltip 1">I see these things are getting intresting day by day 😜</h1>
+        <h1 class="tooltip" data-tooltip="This is long tooltip">Indeed They Are! ❤</h1>
+        <h1 class="tooltip" data-tooltip="Such a pretty pretty world">This text is without a tooltip</h1>
     </div>
     <footer>Crafted in JS</footer>
-    <script src="main.js"></script>
+
+    <!-- <script src="Tooltip.js"></script> -->
+    <!-- <script src="main.js"></script> -->
+
+    <script type="module">
+        import Tooltip from "/Tooltip.js";
+        
+        let tooltip = new Tooltip({
+            color:"red",
+            bgColor : "pink",
+        });
+        tooltip.createTooltip();
+    </script>
 </body>
 </html>
